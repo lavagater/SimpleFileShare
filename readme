@@ -1,0 +1,17 @@
+Couple things to note about this program since this program was ment to be used by just me and my friends
+1. The ip is hard coded because I was the only one plannin on using it(if you want to use the program use your public ip and port forward)
+2. The program is windows only but thats only becasue of the timer class or something so replace that and it can be cross platform i think
+3. ISSERVER, set this to 1 and thats your copy of the program, set it to 0 then its the copy u give to friends
+4. The program can be a little rough on your internet, so you might want to adjust MAXUPLOADSPEED
+
+How this program works?
+step 1: read in some of file from memory
+step 2: send a whole bunch of packets to the other person, sometimes get a message of what packets were dropped and re send thoughs
+step 3: wait for the other person to say they got all the packets, and send any packets they ask for
+repeat steps 1-3 until entire file is sent
+
+reciever
+step 1: listen for packets, save data in memory
+step 2: send what packets are missing
+step 3: send that all packets are recieved
+step 4: write to file go back to step 1
